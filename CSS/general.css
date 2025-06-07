@@ -1,0 +1,56 @@
+/* Make a root font size declaration for use of rem units */
+
+html {
+  font-size: 100%;
+}
+
+/* Reset z-index, all default margins, padding, apply desired default foont stack, and ensure box width includes padding and border width */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  z-index: 0;
+}
+
+/* Remove browsers' default focus styles */
+
+:focus {
+  outline: none;
+}
+
+/* Define default primary colour scheme as CSS variables */
+
+:root {
+  --primary-blue: #0c91f0;
+  --highlight: #f0c043;
+  --dark-grey: #454545; /* Primarily used for secondary text */
+  --beige: #fef9ed;
+  --light-grey: #d8dcdf; /* Primarily used for horizontal lines */
+  --border-grey: #d9dddf; /* Primarily used for borders */
+  --black: #000000; /* Primarily used for text */
+  --white: #ffffff; /* Used ubiqitously but a variable grants control */
+  --dolphin-blue: #02406c; /* Primarily used for button text */
+  --navy: #000080;
+}
+
+/* Define primary colour scheme as CSS variables where user prefers higher contrast */
+
+@media (prefers-contrast: more) {
+  :root {
+  --primary-blue: #0a7ec8;
+  --highlight: #f5d47f;
+  }
+}
+
+/* Define primary colour scheme as CSS variables where user prefers a dark colour scheme */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --primary-blue: #000000;
+  --highlight: #6b6b6b;
+  --navy: #373737;
+  --beige: d8dcdf;
+}
+}
